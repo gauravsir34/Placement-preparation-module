@@ -2,21 +2,7 @@
 
 Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's, and return the matrix.You must do it in place.
 
-### Brute Force
 
--   For every 0 in matrix we set its entire row and column to -1(if all values are positive).
--   We are setting value -1 because, setting value 0 might affect other rows and columns.
--   after whole matrix is traversed, we set all -1 to 0;
--   **Time Complexity: O(m\*n) \* (m+n)**
-    -   m\*n : to traverse the array
-    -   m+n : to traverse the row and column for the element.
--   **Space Complexity: O(1)**
-
-### Optimization using extra space
-
--   We take 2 vectors/set 1 for rows and 1 for columns.
--   We traverse in matrix and if the element is 0, we set the corresponding row and column vector index to 0.
--   After the traversal, we again traverse the matrix and if any of the row or column vector at that index is 0, we set the element to 0.
 -   **Time complexity: 2\*O(N\*M) --> O(N\*M)**
 -   **Space complexity: O(N)**, N = max(m,n)
 
